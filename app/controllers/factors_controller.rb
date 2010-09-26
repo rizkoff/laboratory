@@ -45,7 +45,7 @@ class FactorsController < ApplicationController
 
     respond_to do |format|
       if @factor.save
-        format.html { redirect_to(@factor, :notice => 'Factor was successfully created.') }
+        format.html { redirect_to([@speciman, @factor], :notice => 'Factor was successfully created.') }
         format.xml  { render :xml => @factor, :status => :created, :location => @factor }
       else
         format.html { render :action => "new" }
@@ -77,7 +77,7 @@ class FactorsController < ApplicationController
     @factor.destroy
 
     respond_to do |format|
-      format.html { redirect_to(specimen_factors_url(@speciman)) }
+      format.html { redirect_to(speciman_factors_url(@speciman)) }
       format.xml  { head :ok }
     end
   end

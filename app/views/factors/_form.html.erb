@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :speciman_id %><br />
-    <%= f.text_field :speciman_id %>
+    <%= f.label :speciman_id, @speciman.title %><br />
+    <%= f.hidden_field :speciman_id %>
   </div>
   <div class="field">
     <%= f.label :j_n %><br />
