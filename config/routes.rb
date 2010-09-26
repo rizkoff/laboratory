@@ -3,10 +3,10 @@ Laboratory::Application.routes.draw do
 
   # resources :factors
 
-  resources :shipments
 
   resources :specimen do
     resources :factors
+    resources :shipments
   end
 
   # The priority is based upon order of creation:
