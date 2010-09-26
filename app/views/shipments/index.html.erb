@@ -1,0 +1,33 @@
+<h1>Listing shipments</h1>
+
+<table>
+  <tr>
+    <th>Speciman</th>
+    <th>Batch number</th>
+    <th>Check number</th>
+    <th>Manuf date</th>
+    <th>Release date</th>
+    <th>Expire date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shipments.each do |shipment| %>
+  <tr>
+    <td><%= shipment.speciman_id %></td>
+    <td><%= shipment.batch_number %></td>
+    <td><%= shipment.check_number %></td>
+    <td><%= shipment.manuf_date %></td>
+    <td><%= shipment.release_date %></td>
+    <td><%= shipment.expire_date %></td>
+    <td><%= link_to 'Show', shipment %></td>
+    <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
+    <td><%= link_to 'Destroy', shipment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shipment', new_shipment_path %>

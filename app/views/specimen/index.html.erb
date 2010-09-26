@@ -1,0 +1,23 @@
+<h1>Listing specimen</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specimen.each do |speciman| %>
+  <tr>
+    <td><%= speciman.title %></td>
+    <td><%= link_to 'Show', speciman %></td>
+    <td><%= link_to 'Edit', edit_speciman_path(speciman) %></td>
+    <td><%= link_to 'Destroy', speciman, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Speciman', new_speciman_path %>

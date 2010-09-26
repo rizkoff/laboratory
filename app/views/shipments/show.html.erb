@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Speciman:</b>
+  <%= @shipment.speciman_id %>
+</p>
+
+<p>
+  <b>Batch number:</b>
+  <%= @shipment.batch_number %>
+</p>
+
+<p>
+  <b>Check number:</b>
+  <%= @shipment.check_number %>
+</p>
+
+<p>
+  <b>Manuf date:</b>
+  <%= @shipment.manuf_date %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%= @shipment.release_date %>
+</p>
+
+<p>
+  <b>Expire date:</b>
+  <%= @shipment.expire_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
+<%= link_to 'Back', shipments_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Speciman:</b>
+  <%= @factor.speciman_id %>
+</p>
+
+<p>
+  <b>J n:</b>
+  <%= @factor.j_n %>
+</p>
+
+<p>
+  <b>J title:</b>
+  <%= @factor.j_title %>
+</p>
+
+<p>
+  <b>J def:</b>
+  <%= @factor.j_def %>
+</p>
+
+<p>
+  <b>Pasp n:</b>
+  <%= @factor.pasp_n %>
+</p>
+
+<p>
+  <b>Pasp title:</b>
+  <%= @factor.pasp_title %>
+</p>
+
+<p>
+  <b>Pasp reqmt:</b>
+  <%= @factor.pasp_reqmt %>
+</p>
+
+<p>
+  <b>Pasp def:</b>
+  <%= @factor.pasp_def %>
+</p>
+
+
+<%= link_to 'Edit', edit_speciman_factor_path(@speciman, @factor) %> |
+<%= link_to 'Back', speciman_factors_path(@speciman) %>

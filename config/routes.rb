@@ -1,4 +1,14 @@
 Laboratory::Application.routes.draw do
+  resources :fvalues
+
+  # resources :factors
+
+  resources :shipments
+
+  resources :specimen do
+    resources :factors
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

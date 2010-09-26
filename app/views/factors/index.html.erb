@@ -1,0 +1,37 @@
+<h1>Listing factors</h1>
+
+<table>
+  <tr>
+    <th>Speciman</th>
+    <th>J n</th>
+    <th>J title</th>
+    <th>J def</th>
+    <th>Pasp n</th>
+    <th>Pasp title</th>
+    <th>Pasp reqmt</th>
+    <th>Pasp def</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @speciman.factors.each do |factor| %>
+  <tr>
+    <td><%= factor.speciman_id %></td>
+    <td><%= factor.j_n %></td>
+    <td><%= factor.j_title %></td>
+    <td><%= factor.j_def %></td>
+    <td><%= factor.pasp_n %></td>
+    <td><%= factor.pasp_title %></td>
+    <td><%= factor.pasp_reqmt %></td>
+    <td><%= factor.pasp_def %></td>
+    <td><%= link_to 'Show', [@speciman, factor] %></td>
+    <td><%= link_to 'Edit', edit_speciman_factor_path(factor.speciman,factor) %></td>
+    <td><%= link_to 'Destroy', [@speciman, factor], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Factor', new_speciman_factor_path(@speciman) %>
