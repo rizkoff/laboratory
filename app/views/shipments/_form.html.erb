@@ -1,4 +1,13 @@
-<%= form_for(@shipment) do |f| %>
+
+<script type="text/javascript">
+  $(function() {
+    $("#manufdt").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#releasedt").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#expiredt").datepicker({ dateFormat: 'yy-mm-dd' });
+  });
+</script>
+
+<%= form_for([@speciman,@shipment]) do |f| %>
   <% if @shipment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@shipment.errors.count, "error") %> prohibited this shipment from being saved:</h2>
@@ -12,28 +21,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :speciman_id %><br />
-    <%= f.text_field :speciman_id %>
+    <%= f.label :speciman_id, @speciman.title %><br />
+    <%= f.hidden_field :speciman_id %>
   </div>
   <div class="field">
-    <%= f.label :batch_number %><br />
+    <%= f.label :batch_number, (t 'shipments.batch_number') %><br />
     <%= f.text_field :batch_number %>
   </div>
   <div class="field">
-    <%= f.label :check_number %><br />
+    <%= f.label :check_number, (t 'shipments.check_number') %><br />
     <%= f.text_field :check_number %>
   </div>
   <div class="field">
-    <%= f.label :manuf_date %><br />
-    <%= f.date_select :manuf_date %>
+    <%= f.label :manufdt, (t 'shipments.manufdt') %><br />
+    <%= f.text_field :manufdt, :size => 10, :id => 'manufdt', :include_blank => true %>
   </div>
   <div class="field">
-    <%= f.label :release_date %><br />
-    <%= f.date_select :release_date %>
+    <%= f.label :releasedt, (t 'shipments.releasedt') %><br />
+    <%= f.text_field :releasedt, :size => 10, :id => 'releasedt', :include_blank => true %>
   </div>
   <div class="field">
-    <%= f.label :expire_date %><br />
-    <%= f.date_select :expire_date %>
+    <%= f.label :expiredt, (t 'shipments.expiredt') %><br />
+    <%= f.text_field :expiredt, :size => 10, :id => 'expiredt', :include_blank => true %>
   </div>
   <div class="actions">
     <%= f.submit %>

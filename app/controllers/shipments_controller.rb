@@ -1,8 +1,9 @@
 class ShipmentsController < ApplicationController
+  before_filter :get_speciman
   # GET /shipments
   # GET /shipments.xml
   def index
-    @shipments = Shipment.all
+    @shipments = @speciman.shipments.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,7 @@ class ShipmentsController < ApplicationController
   # GET /shipments/1
   # GET /shipments/1.xml
   def show
-    @shipment = Shipment.find(params[:id])
+    @shipment = @speciman.shipments.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class ShipmentsController < ApplicationController
   # GET /shipments/new
   # GET /shipments/new.xml
   def new
-    @shipment = Shipment.new
+    @shipment = @speciman.shipments.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +35,17 @@ class ShipmentsController < ApplicationController
 
   # GET /shipments/1/edit
   def edit
-    @shipment = Shipment.find(params[:id])
+    @shipment = @speciman.shipments.find(params[:id])
   end
 
   # POST /shipments
   # POST /shipments.xml
   def create
-    @shipment = Shipment.new(params[:shipment])
+    @shipment = @speciman.shipments.new(params[:shipment])
 
     respond_to do |format|
       if @shipment.save
-        format.html { redirect_to(@shipment, :notice => 'Shipment was successfully created.') }
+        format.html { redirect_to([@speciman, @shipment], :notice => 'Shipment was successfully created.') }
         format.xml  { render :xml => @shipment, :status => :created, :location => @shipment }
       else
         format.html { render :action => "new" }
@@ -56,11 +57,11 @@ class ShipmentsController < ApplicationController
   # PUT /shipments/1
   # PUT /shipments/1.xml
   def update
-    @shipment = Shipment.find(params[:id])
+    @shipment = @speciman.shipments.find(params[:id])
 
     respond_to do |format|
       if @shipment.update_attributes(params[:shipment])
-        format.html { redirect_to(@shipment, :notice => 'Shipment was successfully updated.') }
+        format.html { redirect_to([@speciman, @shipment], :notice => 'Shipment was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -72,12 +73,19 @@ class ShipmentsController < ApplicationController
   # DELETE /shipments/1
   # DELETE /shipments/1.xml
   def destroy
-    @shipment = Shipment.find(params[:id])
+    @shipment = @speciman.shipments.find(params[:id])
     @shipment.destroy
 
     respond_to do |format|
-      format.html { redirect_to(shipments_url) }
+      format.html { redirect_to(speciman_shipments_url(@speciman)) }
       format.xml  { head :ok }
     end
   end
+
+  private
+
+    def get_speciman
+      @speciman = Speciman.find params[:speciman_id]
+    end
+
 end

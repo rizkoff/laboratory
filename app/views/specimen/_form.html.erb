@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title, (t 'specimen.title') %><br />
     <%= f.text_field :title %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => (t 'specimen.save') %>
   </div>
 <% end %>

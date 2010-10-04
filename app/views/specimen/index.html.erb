@@ -1,8 +1,8 @@
-<h1>Listing specimen</h1>
+<h1><%= t 'specimen.listing' %></h1>
 
 <table>
   <tr>
-    <th>Title</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,13 +11,13 @@
 <% @specimen.each do |speciman| %>
   <tr>
     <td><%= speciman.title %></td>
-    <td><%= link_to 'Show', speciman %></td>
-    <td><%= link_to 'Edit', edit_speciman_path(speciman) %></td>
-    <td><%= link_to 'Destroy', speciman, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to (t 'shipments.nav'), speciman_shipments_path(speciman) %></td>
+    <td><%= link_to (t 'nav.Show'), speciman %></td>
+    <td><%= link_to (t 'nav.Edit'), edit_speciman_path(speciman) %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Speciman', new_speciman_path %>
+<%= link_to (t 'specimen.nav-new'), new_speciman_path %>

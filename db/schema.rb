@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100925110721) do
+ActiveRecord::Schema.define(:version => 20101003155812) do
 
   create_table "factors", :force => true do |t|
     t.integer  "speciman_id"
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(:version => 20100925110721) do
     t.integer  "speciman_id"
     t.string   "batch_number"
     t.integer  "check_number"
-    t.date     "manuf_date"
-    t.date     "release_date"
-    t.date     "expire_date"
+    t.date     "manufdt"
+    t.date     "releasedt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "expiredt"
   end
 
   create_table "specimen", :force => true do |t|

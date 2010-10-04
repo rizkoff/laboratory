@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%= t 'specimen.title' %>:</b>
   <%= @speciman.title %>
 </p>
 
 <p>
   <b></b>
-  <%= link_to 'Factors', speciman_factors_path(@speciman) %>
+  <%= link_to (t 'factors.title'), speciman_factors_path(@speciman) %>
 </p>
 
 
-<%= link_to 'Edit', edit_speciman_path(@speciman) %> |
-<%= link_to 'Back', specimen_path %>
+<%= link_to (t 'nav.Edit'), edit_speciman_path(@speciman) %> |
+<%= link_to (t 'nav.Back'), specimen_path %>

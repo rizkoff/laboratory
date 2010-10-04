@@ -2,7 +2,7 @@
 
 <p>
   <b>Speciman:</b>
-  <%= @shipment.speciman_id %>
+  <%= @shipment.speciman.title %>
 </p>
 
 <p>
@@ -17,19 +17,19 @@
 
 <p>
   <b>Manuf date:</b>
-  <%= @shipment.manuf_date %>
+  <%= @shipment.manufdt %>
 </p>
 
 <p>
   <b>Release date:</b>
-  <%= @shipment.release_date %>
+  <%= @shipment.releasedt %>
 </p>
 
 <p>
   <b>Expire date:</b>
-  <%= @shipment.expire_date %>
+  <%= @shipment.expiredt %>
 </p>
 
 
-<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
-<%= link_to 'Back', shipments_path %>
+<%= link_to 'Edit', edit_speciman_shipment_path(@speciman, @shipment) %> |
+<%= link_to 'Back', speciman_shipments_path(@speciman) %>

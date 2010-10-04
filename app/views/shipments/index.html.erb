@@ -15,19 +15,19 @@
 
 <% @shipments.each do |shipment| %>
   <tr>
-    <td><%= shipment.speciman_id %></td>
+    <td><%= shipment.speciman.title %></td>
     <td><%= shipment.batch_number %></td>
     <td><%= shipment.check_number %></td>
-    <td><%= shipment.manuf_date %></td>
-    <td><%= shipment.release_date %></td>
-    <td><%= shipment.expire_date %></td>
-    <td><%= link_to 'Show', shipment %></td>
-    <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
-    <td><%= link_to 'Destroy', shipment, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= shipment.manufdt %></td>
+    <td><%= shipment.releasedt %></td>
+    <td><%= shipment.expiredt %></td>
+    <td><%= link_to 'Show', [@speciman, shipment] %></td>
+    <td><%= link_to 'Edit', edit_speciman_shipment_path(shipment.speciman, shipment) %></td>
+    <td><%= link_to 'Destroy', [@speciman, shipment], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Shipment', new_shipment_path %>
+<%= link_to 'New Shipment', new_speciman_shipment_path(@speciman) %>

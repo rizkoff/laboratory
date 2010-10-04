@@ -1,2 +1,4 @@
-table tr.L2 th {border-bottom: none; background-color: #f0f0f0; letter-spacing: 0.4em; }
+table tr.L2 th {border-bottom: none; background-color: #999; letter-spacing: 0.4em; }
 table tr th {border-bottom: solid 1px #777; background-color: #ccc;}
+table tr td {border-bottom: solid 1px #bbb; }
+table tr *.nc {border-left: solid 1px #999; }
