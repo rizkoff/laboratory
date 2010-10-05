@@ -9,6 +9,7 @@ Laboratory::Application.routes.draw do
     resources :shipments
   end
   # resources :shipments
+  match 'specimen/:speciman_id/shipments/:id/passport' => 'shipments#passport', :as => :passport
 
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'

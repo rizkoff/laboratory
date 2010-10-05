@@ -23,11 +23,11 @@
     <td><%= shipment.expiredt %></td>
     <td><%= link_to 'Show', [@speciman, shipment] %></td>
     <td><%= link_to 'Edit', edit_speciman_shipment_path(shipment.speciman, shipment) %></td>
-    <td><%= link_to 'Destroy', [@speciman, shipment], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'passport', passport_path(shipment.speciman, shipment), :target => '_blank' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Shipment', new_speciman_shipment_path(@speciman) %>
+<%= link_to (t 'shipments.nav-new'), new_speciman_shipment_path(@speciman) %>

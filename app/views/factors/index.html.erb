@@ -26,7 +26,7 @@
     <td><%= factor.pasp_def %></td>
     <td><%= link_to 'Show', [@speciman, factor] %></td>
     <td><%= link_to 'Edit', edit_speciman_factor_path(factor.speciman,factor) %></td>
-    <td><%= link_to 'Destroy', [@speciman, factor], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', speciman_factor_path(@speciman, factor), :method => :delete, :confirm => 'Are you sure?' %></td>
   </tr>
 <% end %>
 </table>

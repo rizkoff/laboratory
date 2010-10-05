@@ -1,1 +1,1 @@
-I18n.locale = 'ru'
+I18n.locale = 'ar'

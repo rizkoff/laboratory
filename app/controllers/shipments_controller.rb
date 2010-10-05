@@ -2,6 +2,16 @@ class ShipmentsController < ApplicationController
   before_filter :get_speciman
   # GET /shipments
   # GET /shipments.xml
+  def passport
+    @shipment = @speciman.shipments.find(params[:id])
+
+    respond_to do |format|
+      format.html {render :html => :passport, :layout => 'printer'}
+      format.xml  { render :xml => @shipments }
+    end
+    
+  end
+
   def index
     @shipments = @speciman.shipments.all
 

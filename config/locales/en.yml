@@ -29,6 +29,7 @@ en:
     listing: "Listing Specimen"
   shipments:
     nav: 'shipments'
+    nav-new: 'new shipment'
     batch_number: 'batch #'
     check_number: 'control #'
     manufdt: 'manufactured at'

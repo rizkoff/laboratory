@@ -25,7 +25,8 @@ ru:
     nav-new: "новый препарат в каталог"
     listing: "Каталог препаратов"
   shipments:
-    nav: 'Выпуски'
+    nav: 'серии'
+    nav-new: 'новая серия'
     batch_number: '№ серии'
     check_number: 'контрольный №'
     manufdt: 'дата изготовления'

@@ -1,9 +1,10 @@
 
 <script type="text/javascript">
-  $(function() {
-    $("#manufdt").datepicker({ dateFormat: 'yy-mm-dd' });
-    $("#releasedt").datepicker({ dateFormat: 'yy-mm-dd' });
-    $("#expiredt").datepicker({ dateFormat: 'yy-mm-dd' });
+  jQuery.noConflict();
+  jQuery(document).ready(function() {
+    jQuery("#manufdt").datepicker({ dateFormat: 'yy-mm-dd' });
+    jQuery("#releasedt").datepicker({ dateFormat: 'yy-mm-dd' });
+    jQuery("#expiredt").datepicker({ dateFormat: 'yy-mm-dd' });
   });
 </script>
 

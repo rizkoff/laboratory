@@ -10,10 +10,11 @@
 
 <% @specimen.each do |speciman| %>
   <tr>
-    <td><%= speciman.title %></td>
+    <td><%= link_to (speciman.title), edit_speciman_path(speciman) %></td>
     <td><%= link_to (t 'shipments.nav'), speciman_shipments_path(speciman) %></td>
-    <td><%= link_to (t 'nav.Show'), speciman %></td>
-    <td><%= link_to (t 'nav.Edit'), edit_speciman_path(speciman) %></td>
+    <td><%= link_to (t 'factors.title'), speciman_factors_path(speciman) %></td>
+    <!-- %= link_to (t 'nav.Show'), speciman %  -->
+    <td><%= nil %></td>
   </tr>
 <% end %>
 </table>
