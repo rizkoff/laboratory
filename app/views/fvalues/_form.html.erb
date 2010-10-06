@@ -1,4 +1,4 @@
-<%= form_for(@fvalue) do |f| %>
+<%= form_for([@speciman,@shipment,@fvalue]) do |f| %>
   <% if @fvalue.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@fvalue.errors.count, "error") %> prohibited this fvalue from being saved:</h2>

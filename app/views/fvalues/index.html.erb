@@ -1,27 +1,20 @@
-<h1>Listing fvalues</h1>
+<h1>Listing fvalues for shipment <%= @shipment.batch_number %></h1>
 
 <table>
   <tr>
     <th>Factor</th>
-    <th>Shipment</th>
     <th>Fvalue</th>
-    <th></th>
-    <th></th>
     <th></th>
   </tr>
 
 <% @fvalues.each do |fvalue| %>
   <tr>
-    <td><%= fvalue.factor_id %></td>
-    <td><%= fvalue.shipment_id %></td>
+    <td><%= link_to fvalue.factor.j_title, edit_speciman_shipment_fvalue_path(@speciman, @shipment, fvalue) %></td>
     <td><%= fvalue.fvalue %></td>
-    <td><%= link_to 'Show', fvalue %></td>
-    <td><%= link_to 'Edit', edit_fvalue_path(fvalue) %></td>
-    <td><%= link_to 'Destroy', fvalue, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Fvalue', new_fvalue_path %>
+<!-- %= link_to 'New Fvalue', new_speciman_shipment_fvalue_path(@speciman, @shipment) %  -->

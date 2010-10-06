@@ -71,7 +71,8 @@ class ShipmentsController < ApplicationController
 
     respond_to do |format|
       if @shipment.update_attributes(params[:shipment])
-        format.html { redirect_to([@speciman, @shipment], :notice => 'Shipment was successfully updated.') }
+        format.html { redirect_to(speciman_shipment_fvalues_path(@speciman, @shipment), :notice => 'Shipment was successfully updated.') }
+        # format.html { redirect_to([@speciman, @shipment], :notice => 'Shipment was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @fvalue %> |
-<%= link_to 'Back', fvalues_path %>
+<%= link_to 'Show', [@speciman, @shipment, @fvalue] %> |
+<%= link_to 'Back', speciman_shipment_fvalues_path(@speciman, @shipment) %>

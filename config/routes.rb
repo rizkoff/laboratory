@@ -1,12 +1,14 @@
 Laboratory::Application.routes.draw do
-  resources :fvalues
+  
 
   # resources :factors
 
 
   resources :specimen do
     resources :factors
-    resources :shipments
+    resources :shipments do
+      resources :fvalues, :only => [:index, :show, :edit, :update]
+    end
   end
   # resources :shipments
   match 'specimen/:speciman_id/shipments/:id/passport' => 'shipments#passport', :as => :passport

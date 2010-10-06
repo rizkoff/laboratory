@@ -1,6 +1,5 @@
 
 <script type="text/javascript">
-  jQuery.noConflict();
   jQuery(document).ready(function() {
     jQuery("#manufdt").datepicker({ dateFormat: 'yy-mm-dd' });
     jQuery("#releasedt").datepicker({ dateFormat: 'yy-mm-dd' });
@@ -46,6 +45,6 @@
     <%= f.text_field :expiredt, :size => 10, :id => 'expiredt', :include_blank => true %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => 'Next >' %>
   </div>
 <% end %>
