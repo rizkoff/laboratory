@@ -1,34 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b><%= t 'specimen.title' %>:</b>
-  <%= @shipment.speciman.title %>
-</p>
-
-<p>
-  <b><%= t 'shipments.batch_number' %>:</b>
-  <%= @shipment.batch_number %>
-</p>
-
-<p>
-  <b><%= t 'shipments.check_number' %>:</b>
-  <%= @shipment.check_number %>
-</p>
-
-<p>
-  <b><%= t 'shipments.manufdt' %>:</b>
-  <%= @shipment.manufdt %>
-</p>
-
-<p>
-  <b><%= t 'shipments.releasedt' %>:</b>
-  <%= @shipment.releasedt %>
-</p>
-
-<p>
-  <b><%= t 'shipments.expiredt' %>:</b>
-  <%= @shipment.expiredt %>
-</p>
+<%= render :partial => @shipment %>
 
 
 <%= link_to 'Edit', edit_speciman_shipment_path(@speciman, @shipment) %> |

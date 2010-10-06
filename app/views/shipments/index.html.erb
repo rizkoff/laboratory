@@ -1,13 +1,12 @@
-<h1>Listing shipments</h1>
+<h1><%= @speciman.title %> <span style='font-size: 0.5em; font-weight: normal;'><%= t 'shipments.nav' %></span></h1>
 
 <table>
   <tr>
-    <th>Speciman</th>
-    <th>Batch number</th>
-    <th>Check number</th>
-    <th>Manuf date</th>
-    <th>Release date</th>
-    <th>Expire date</th>
+    <th><%= t 'shipments.batch_number' %></th>
+    <th><%= t 'shipments.check_number' %></th>
+    <th><%= t 'shipments.manufdt' %></th>
+    <th><%= t 'shipments.releasedt' %></th>
+    <th><%= t 'shipments.expiredt' %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,7 +14,6 @@
 
 <% @shipments.each do |shipment| %>
   <tr>
-    <td><%= shipment.speciman.title %></td>
     <td><%= shipment.batch_number %></td>
     <td><%= shipment.check_number %></td>
     <td><%= shipment.manufdt %></td>
