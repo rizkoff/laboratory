@@ -34,6 +34,8 @@ ru:
     expiredt: 'срок действия'
   factors:
     title: 'показатели'
+  fvalues:
+    title: 'значения'
   nav:
     Show: 'показать'
     Edit: 'изменить'

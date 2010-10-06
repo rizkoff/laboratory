@@ -3,6 +3,8 @@ table tr th {border-bottom: solid 1px #777; background-color: #ccc;}
 table tr td {border-bottom: solid 1px #bbb; }
 table tr *.nc {border-left: solid 1px #999; }
 
+table.show tr td.ri {text-align: right;}
+
 table.ppt {width:1000px; top:250px; left:30px; position:fixed; }
 table.ppt, table.ppt tr td, table.ppt tr th {border: solid 1px #000; background-color: #fff; padding: 0; margin: 0; border-collapse:collapse;}
 table.ppt tr td, table.ppt tr th { padding:.2em .5em; vertical-align:top; font-weight:normal; text-align: left;}

@@ -1,11 +1,11 @@
-<h1>Listing fvalues for shipment <%= @shipment.batch_number %></h1>
+<h1><span style='font-size: 0.5em; font-weight: normal;'><%= t 'shipments.batch_number' %></span> <%= @shipment.batch_number %></h1>
 
 <%= render :partial => @shipment %>
 
 <table>
   <tr>
-    <th>Factor</th>
-    <th>Fvalue</th>
+    <th><%= t 'factors.title' %></th>
+    <th><%= t 'fvalues.title' %></th>
     <th></th>
   </tr>
 

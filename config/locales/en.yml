@@ -36,7 +36,9 @@ en:
     releasedt: 'released at'
     expiredt: 'exires at'
   factors:
-    title: 'показатели'
+    title: 'factors'
+  fvalues:
+    title: 'values'
   nav:
     Show: 'show'
     Edit: 'Edit'
