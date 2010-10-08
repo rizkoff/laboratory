@@ -2,7 +2,7 @@ class SpecimenController < ApplicationController
   # GET /specimen
   # GET /specimen.xml
   def index
-    @specimen = Speciman.all
+    @specimen = Speciman.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb

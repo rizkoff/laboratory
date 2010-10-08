@@ -1,6 +1,8 @@
 Laboratory::Application.routes.draw do
   
 
+  resources :parms
+
   # resources :factors
 
 

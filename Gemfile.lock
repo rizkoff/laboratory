@@ -31,10 +31,18 @@ GEM
     arel (0.4.0)
       activesupport (>= 3.0.0.beta)
     builder (2.1.2)
+    configuration (1.1.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    heroku (1.10.13)
+      json_pure (>= 1.2.0, < 1.5.0)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     i18n (0.4.1)
     json_pure (1.4.6)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
@@ -82,6 +90,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  heroku
   rails (= 3.0.0.rc)
   sqlite3-ruby
   taps

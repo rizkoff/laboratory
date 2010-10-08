@@ -10,44 +10,53 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101003155812) do
+ActiveRecord::Schema.define(:version => 20101008154456) do
 
   create_table "factors", :force => true do |t|
-    t.integer  "speciman_id"
-    t.integer  "j_n"
-    t.string   "j_title"
-    t.string   "j_def"
-    t.integer  "pasp_n"
-    t.string   "pasp_title"
-    t.string   "pasp_reqmt"
-    t.string   "pasp_def"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "speciman_id"
+    t.integer   "j_n"
+    t.string    "j_title"
+    t.string    "j_def"
+    t.integer   "pasp_n"
+    t.string    "pasp_title"
+    t.string    "pasp_reqmt"
+    t.string    "pasp_def"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "fvalues", :force => true do |t|
-    t.integer  "factor_id"
-    t.integer  "shipment_id"
-    t.string   "fvalue"
+    t.integer   "factor_id"
+    t.integer   "shipment_id"
+    t.string    "fvalue"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
+
+  create_table "parms", :force => true do |t|
+    t.string   "title"
+    t.string   "val"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "shipments", :force => true do |t|
-    t.integer  "speciman_id"
-    t.string   "batch_number"
-    t.integer  "check_number"
-    t.date     "manufdt"
-    t.date     "releasedt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.date     "expiredt"
+    t.integer   "speciman_id"
+    t.string    "batch_number"
+    t.integer   "check_number"
+    t.date      "manufdt"
+    t.date      "releasedt"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.date      "expiredt"
   end
 
   create_table "specimen", :force => true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title_upcased"
+    t.integer  "priord",        :default => 0
   end
 
 end
